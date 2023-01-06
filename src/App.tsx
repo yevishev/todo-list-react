@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function App() {
   const [value, setValue] = useState('') 
-  const [todos, setTodos] = useState([''])//не понял, почему сюда нельзя передавать пустой массив
+  const [todos, setTodos] = useState<String[]>([])
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value)
